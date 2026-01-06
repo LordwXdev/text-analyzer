@@ -36,7 +36,10 @@ int analyze_file_stats(const char *path, Stats *out_stats)
     *out_stats = s;
     return 1;
 }
-int build_word_freq(const char *path);
+int build_word_freq(const char *path)
+{
+    
+}
 void print_top_words(int top_n);
 int count_word_in_file(const char *path, const char *query);
 
