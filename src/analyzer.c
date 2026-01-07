@@ -38,7 +38,36 @@ int analyze_file_stats(const char *path, Stats *out_stats)
 }
 int build_word_freq(const char *path)
 {
-    
+    FILE *fp = fopen(path, "r");
+    if(!fp) return 0;
+
+    char word[256];
+    int index = 0;
+    int c;
+
+    while ((c = fgetc(fp)) != EOF)
+    {
+        if (is_word_char((unsigned char)c))
+        {
+            if (index < 255)
+                word[index++] = (char)c;
+        }
+        else if (index > 0)
+        {
+            word[index] = '\0';
+            add_word(word);   // your existing logic
+            index = 0;
+        }
+    }
+
+    if (index > 0)
+    {
+        word[index] = '\0';
+        add_word(word);
+    }
+
+    fclose(fp);
+    return 1;
 }
 void print_top_words(int top_n)
 {
