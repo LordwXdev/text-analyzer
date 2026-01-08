@@ -75,7 +75,32 @@ void print_top_words(int top_n)
 }
 int count_word_in_file(const char *path, const char *query)
 {
+    FILE *fp = fopen(path, "r");
+    if(!fp) return -1;
 
+    char word[256];
+    int index = 0;
+    int c;
+    int count = 0;
+
+    while ((c = fgetc(fp)) != EOF)
+    {
+        if (is_word_char((unsigned char)c))
+        {
+            if (index < 255)
+                word[index++] = (char)c;
+        }
+        else if (index > 0)
+        {
+            word[index] = '\0';
+            if (strcmp(word, query) == 0)
+                count++;
+            index = 0;
+        }
+    }
+
+    fclose(fp);
+    return count;
 }
 
 void free_word_freq(void)
