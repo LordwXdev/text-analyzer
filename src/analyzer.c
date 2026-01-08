@@ -55,7 +55,7 @@ int build_word_freq(const char *path)
         else if (index > 0)
         {
             word[index] = '\0';
-            add_word(word);   // your existing logic
+            add_word(word);  
             index = 0;
         }
     }
@@ -78,4 +78,9 @@ int count_word_in_file(const char *path, const char *query)
 
 }
 
-void free_word_freq(void);
+void free_word_freq(void)
+{
+    free(words);
+    words = NULL;
+    word_count = 0;
+}
