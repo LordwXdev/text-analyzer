@@ -71,7 +71,10 @@ int build_word_freq(const char *path)
 }
 void print_top_words(int top_n)
 {
-
+    for (int i = 0; i < top_n && i < word_count; i++)
+    {
+        printf("%s : %d\n", words[i].word, words[i].count);
+    }
 }
 int count_word_in_file(const char *path, const char *query)
 {
@@ -103,7 +106,7 @@ int count_word_in_file(const char *path, const char *query)
     return count;
 }
 
-void free_word_freq(void)
+void free_word_freq()
 {
     free(words);
     words = NULL;
