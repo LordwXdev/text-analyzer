@@ -69,6 +69,7 @@ int build_word_freq(const char *path)
     fclose(fp);
     return 1;
 }
+
 void print_top_words(int top_n)
 {
     for (int i = 0; i < top_n && i < word_count; i++)
