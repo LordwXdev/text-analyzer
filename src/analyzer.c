@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include "analyzer.h"
+#include"utils.h"
 
 /* ===============================
    Helper: check if char is part of a word
