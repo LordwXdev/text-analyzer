@@ -1,6 +1,7 @@
 #ifndef TEXT_ANALYZER_H
 #define TEXT_ANALYZER_H
 
+
 #include <stdio.h>
 
 /* ===============================
