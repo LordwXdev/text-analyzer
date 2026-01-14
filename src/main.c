@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "analyzer.h"
+#include"utils.h"
 
 int main(int argc, char *argv[])
 {
