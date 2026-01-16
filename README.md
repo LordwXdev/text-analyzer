@@ -26,11 +26,11 @@ This project is built **step by step for learning purposes**, focusing on real C
 
 ## How It Works
 
-1. The user provides a text file as input
-2. The program reads the file safely
-3. Text is analyzed line by line and character by character
-4. Statistics are calculated using dedicated functions
-5. Results are printed to the terminal
+1. The user provides a text file as input.
+2. The program reads the file safely.
+3. Text is analyzed line by line and character by character.
+4. Statistics are calculated using dedicated functions.
+5. Results are printed to the terminal.
 
 The logic is separated from the control flow to keep the code clean and readable.
 
