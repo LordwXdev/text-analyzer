@@ -5,7 +5,7 @@
 #include "analyzer.h"
 #include"utils.h"
 
-
+//this for practice
 
 /* ===============================
    Helper: check if char is part of a word
