@@ -1,6 +1,7 @@
 #include"utils.h"
 #include<ctype.h>
 
+
 int is_word_char(int c)
 {
     return isalnum((unsigned char)c) || c== '\'';
