@@ -35,4 +35,3 @@ int main(int argc, char *argv[])
     free_word_freq();
     return 0;
 }
-//to test if the code runs perfectly. 
