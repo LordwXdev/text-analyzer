@@ -7,17 +7,13 @@
 
 //this for practice
 
-/* 
-   Helper: check if char is part of a word
-   */
+/* Helper: check if char is part of a word*/
 int is_word_char(unsigned char c)
 {
     return isalnum(c);
 }
 
-/* ===============================
-   File statistics (lines, words, chars)
-   =============================== */
+/*  File statistics (lines, words, chars)*/
 int analyze_file_stats(const char *path, Stats *out_stats)
 {
     FILE *fp = fopen(path, "r");
