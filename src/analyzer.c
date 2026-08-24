@@ -7,9 +7,9 @@
 
 //this for practice
 
-/* ===============================
+/* 
    Helper: check if char is part of a word
-   =============================== */
+   */
 int is_word_char(unsigned char c)
 {
     return isalnum(c);
